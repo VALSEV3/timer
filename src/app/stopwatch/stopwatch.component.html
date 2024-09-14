@@ -1,0 +1,29 @@
+<div class="main container-fluid" style="width:100vw !important;height: 100vh !important;">
+  <div class="seconds w-100 h-75 d-flex justify-content-center align-items-center container-fluid">
+    <h1 style="font-size: 6rem;color: white;" id="hours-display">{{ displayTime }}</h1>
+  </div>
+
+  <!-- Start Button - Displayed when stopwatch is not running -->
+  <div *ngIf="started" class="start d-flex justify-content-center align-items-center container">
+    <button (click)="secondsStart()" class="btn btn-outline-light m-2 btn-lg" id="start-stopwatch" aria-label="Start">
+      <i class="bi bi-play-fill"></i>
+    </button>
+    <button (click)="secondsReset()" class="btn btn-outline-light m-2 btn-lg" id="reset-stopwatch" aria-label="Reset">
+      <i class="bi bi-x-square"></i>
+    </button>
+  
+  </div>
+
+  <!-- Stop Button - Displayed when stopwatch is running -->
+  <div *ngIf="!started" class="stop d-flex justify-content-center align-items-center container">
+    <button (click)="secondsStop()" class="btn btn-outline-light m-2 btn-lg" id="stop-stopwatch" aria-label="Stop">
+      <i class="bi bi-stop-fill"></i>
+    </button>
+    <button (click)="secondsReset()" class="btn btn-outline-light m-2 btn-lg" id="reset-stopwatch" aria-label="Reset">
+      <i class="bi bi-x-square"></i>
+    </button>
+
+  </div>
+
+
+</div>

@@ -16,7 +16,7 @@ export class TimerControllerComponent {
   hours = 0;
   started = true;
   intervalId: any;
- 
+
   start() {
     this.started = false;
     this.intervalId = setInterval(() => {
@@ -31,7 +31,7 @@ export class TimerControllerComponent {
         }
         this.seconds = 59;
       } else {
-        // Таймер завершен, останавливаем интервал
+        
         this.stopTimer();
 
       }
