@@ -1,0 +1,34 @@
+<div
+  class="main container-fluid d-flex flex-wrap justify-content-center align-items-center text-center"
+  style="color:white;width:100vw;height:100vh;"
+>
+  <div class="container-fluid d-flex justify-content-center align-items-center text-center">
+    <app-timer
+      [time]="hours"
+      [isStarted]="started"
+      [title]="'Hours'"
+      (timeChange)="onTimeChange($event, 'hours')"
+    ></app-timer>
+    <app-timer
+      [time]="minutes"
+      [isStarted]="started"
+      [title]="'Minutes'"
+      (timeChange)="onTimeChange($event, 'minutes')"
+    ></app-timer>
+    <app-timer
+      [time]="seconds"
+      [isStarted]="started"
+      [title]="'Seconds'"
+      (timeChange)="onTimeChange($event, 'seconds')"
+    ></app-timer>
+  </div>
+
+  <div class="start" *ngIf="started">
+    <button (click)="start()" class="btn btn-outline-light btn-lg">Start</button>
+  </div>
+
+  <div class="stop" *ngIf="!started">
+    <button (click)="stopTimer()" class="btn btn-outline-light btn-lg">Stop</button>
+  </div>
+</div>
+

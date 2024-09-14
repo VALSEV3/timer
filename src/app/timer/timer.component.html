@@ -1,0 +1,16 @@
+<div class="main container-fluid ">
+  <div class=" container-fluid text-center ">
+    <h5>{{title}}</h5>
+
+    <button *ngIf="isStarted" (click)="increment()" class="btn btn-light m-2 mt-3" id="increment-hours-btn" aria-label="Increase hours">
+  <img src="caret-up-fill.svg">
+    </button>
+
+    <h1 style="font-size: 6rem; margin-top: 1rem;" id="hours-display">{{time}}</h1>
+
+    <button *ngIf="isStarted" (click)="decrement()" class="btn btn-light m-2 mt-5" id="decrement-hours-btn" aria-label="Decrease hours">
+    <img src="caret-down-fill.svg">
+    </button>
+  </div>
+
+</div>
